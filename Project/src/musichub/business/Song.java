@@ -2,10 +2,13 @@ package musichub.business;
 
 import org.w3c.dom.*;
 
+import java.io.Serializable;
 
-public class Song extends AudioElement {
+
+public class Song extends AudioElement implements Serializable {
 	private Genre genre;
-	
+	private static final long serialVersionUID = 0;
+
 	public Song (String title, String artist, int length, String uid, String content, String genre) {
 		super (title, artist, length, uid, content);
 		this.setGenre(genre);

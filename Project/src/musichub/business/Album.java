@@ -1,18 +1,20 @@
 package musichub.business;
 
+import java.io.Serializable;
 import java.util.*;
 import org.w3c.dom.*;
 import java.text.*;
 
 
 
-public class Album {
+public class Album implements Serializable {
 	private String title;
 	private String artist;
 	private int lengthInSeconds;
 	private UUID uuid;
 	private Date date;
 	private ArrayList<UUID> songsUIDs;
+	private static final long serialVersionUID = 0;
 
 	public Album (String title, String artist, int lengthInSeconds, String id, String date, ArrayList<UUID> songsUIDs) {
 		this.title = title;

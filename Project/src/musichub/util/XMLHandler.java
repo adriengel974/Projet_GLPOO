@@ -9,7 +9,7 @@ import org.xml.sax.SAXException;
 import org.w3c.dom.*;
 import java.io.IOException;
 import java.io.File;
-
+import java.io.Serializable;
 
 
 public class XMLHandler {
@@ -17,6 +17,7 @@ public class XMLHandler {
 	Transformer transformer;
 	DocumentBuilderFactory documentFactory;
 	DocumentBuilder documentBuilder;
+	private static final long serialVersionUID = 0;
 
 	public XMLHandler() {
 		try {

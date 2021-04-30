@@ -25,9 +25,8 @@ public class MusicHubClient {
 		System.out.println("s: save elements, albums, playlists");
 		System.out.println("q: quit program");
 	}
-	
-	public void connect(String ip)
-	{
+
+	public void connect(String ip) {
 		int port = 6666;
         try  {
 			//create the socket; it is defined by an remote IP address (the address of the server) and a port number
@@ -38,15 +37,14 @@ public class MusicHubClient {
 			output = new ObjectOutputStream(socket.getOutputStream());
             input = new ObjectInputStream(socket.getInputStream());
 
-            //MusicHubUser user = new MusicHubUser();
-            Scanner scan = new Scanner(System.in);
+			var user = (MusicHubUser) input.readObject(); //deserialize and read the user object from the stream
+			user.userConnection();
+
+			Scanner scan = new Scanner(System.in);
 			String choice = scan.nextLine();
 
-			System.out.println("text sent to the server: " + choice);
+			//System.out.println("text sent to the server: " + choice);
 			output.writeObject(choice);	//serialize and write the String to the stream
-
-			MusicHubUser user = (MusicHubUser) input.readObject();	//deserialize and read the user object from the stream
-			System.out.println(user.getAlbumsTitlesSortedByDate());
 
 			while(choice.charAt(0) != 'q'){
 				choice = scan.nextLine();
@@ -54,7 +52,6 @@ public class MusicHubClient {
 				output.writeObject(choice);
 				user = (MusicHubUser) input.readObject();
 
-				//user = (MusicHubUser) input.readObject();
 				switch (choice.charAt(0)) 	{
 					case 'h':
 						printAvailableCommands();
@@ -69,7 +66,7 @@ public class MusicHubClient {
 						System.out.println("Songs of an album sorted by genre will be displayed; enter the album name, available albums are:");
 						System.out.println(user.getAlbumsTitlesSortedByDate());
 
-						System.out.println("Entrez le nom d\'un album");
+						System.out.println("Enter the name of an album");
 						String albumTitle = scan.nextLine();
 						try {
 							System.out.println(user.getAlbumSongsSortedByGenre(albumTitle));
@@ -119,7 +116,6 @@ public class MusicHubClient {
 						output.writeObject(user);
 						break;
 
-
 					case 'a':
 						//add a new album
 						System.out.println("Enter a new album: ");
@@ -140,7 +136,6 @@ public class MusicHubClient {
 
 						output.writeObject(user);
 						break;
-
 
 					case '+':
 						//add a new audiobook
@@ -172,7 +167,6 @@ public class MusicHubClient {
 						output.writeObject(user);
 						break;
 
-
 					case 'l':
 						//create a new playlist from existing songs and audio books
 						System.out.println("Enter a new audiobook: ");
@@ -196,7 +190,6 @@ public class MusicHubClient {
 
 						output.writeObject(user);
 						break;
-
 
 					case 'p':
 						//delete an existing playlist
@@ -237,7 +230,6 @@ public class MusicHubClient {
 						output.writeObject(user);
 						break;
 
-
 					case '-':
 						//save elements, albums, playlists
 						System.out.println("Delete an existing playlist. Available playlists:");
@@ -257,8 +249,7 @@ public class MusicHubClient {
 						output.writeObject(user);
 						break;
 
-
-					case 's':
+					/*case 's':
 						//save elements, albums, playlists
 						user.saveElements();
 						user.saveAlbums();
@@ -266,13 +257,12 @@ public class MusicHubClient {
 						System.out.println("Elements, albums and playlists saved!");
 
 						output.writeObject(user);
-						break;
+						break;*/
 
 					default:
 						break;
 				}
-			}
-
+			} scan.close();
 
 	    } catch  (UnknownHostException uhe) {
 			uhe.printStackTrace();

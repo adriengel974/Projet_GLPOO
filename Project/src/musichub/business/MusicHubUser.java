@@ -5,7 +5,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
 import java.io.Serializable;
 import java.util.*;
 
@@ -51,6 +50,25 @@ public class MusicHubUser implements Serializable		//must implement Serializable
 		this.loadElements();
 		this.loadAlbums();
 		this.loadPlaylists();
+	}
+
+	public void userConnection(){
+		System.out.println("Enter your id :");
+		Scanner scan = new Scanner(System.in);
+		String id = scan.nextLine();
+
+		if(id.equals("admin") | id.equals("user")){
+			System.out.println("Enter your password :");
+			String pwd = scan.nextLine();
+
+			if (pwd.equals("admin") | pwd.equals("1234")){
+				System.out.println("The id and the password are correct");
+			} else {
+				System.out.println("The id or the password is wrong");
+				System.exit(0);
+			}
+
+		}
 	}
 
 	public void addElement(AudioElement element) {

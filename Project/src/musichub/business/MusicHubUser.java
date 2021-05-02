@@ -41,7 +41,7 @@ public class MusicHubUser implements Serializable,Colors		//must implement Seria
 	public static final String ELEMENTS_FILE_PATH = DIR + "/files/elements.xml";
 	private static final long serialVersionUID = 0;
 	private String userValue = "";
-	private transient XMLHandler xmlHandler = new XMLHandler(); //objet non-sérialisable
+	private transient XMLHandler xmlHandler = new XMLHandler(); //non-serializable object
    
     public MusicHubUser() {
 		albums = new LinkedList<Album>();
@@ -305,12 +305,12 @@ public class MusicHubUser implements Serializable,Colors		//must implement Seria
 	}
 
 	private void loadElements () {
-		NodeList audioelementsNodes = xmlHandler.parseXMLFile(ELEMENTS_FILE_PATH);
-		if (audioelementsNodes == null) return;
+		NodeList audioElementsNodes = xmlHandler.parseXMLFile(ELEMENTS_FILE_PATH);
+		if (audioElementsNodes == null) return;
 
-		for (int i = 0; i < audioelementsNodes.getLength(); i++) {
-			if (audioelementsNodes.item(i).getNodeType() == Node.ELEMENT_NODE)   {
-				Element audioElement = (Element) audioelementsNodes.item(i);
+		for (int i = 0; i < audioElementsNodes.getLength(); i++) {
+			if (audioElementsNodes.item(i).getNodeType() == Node.ELEMENT_NODE)   {
+				Element audioElement = (Element) audioElementsNodes.item(i);
 				if (audioElement.getNodeName().equals("song")) 	{
 					try {
 						AudioElement newSong = new Song (audioElement);

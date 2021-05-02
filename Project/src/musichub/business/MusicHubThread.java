@@ -18,14 +18,14 @@ public class MusicHubThread extends Thread{
 			input = new ObjectInputStream(socket.getInputStream());
 			output = new ObjectOutputStream(socket.getOutputStream());
 
-			MusicHubUser user = new MusicHubUser(); //serialize and write the MusicHubUser object to the stream
+			Object user = new MusicHubUser(); //serialize and write the MusicHubUser object to the stream
 			output.writeObject(user);
 
 			String choice = (String)input.readObject(); //read the object received through the stream and deserialize it
 			if (choice.length() == 0) System.exit(0);
 			System.out.println("server received a text: " + choice);
 
-			while(choice.charAt(0) != 'q') {
+			 do {
 				choice = (String) input.readObject();
 				System.out.println("server received a text: " + choice);
 				output.writeObject(user);
@@ -54,13 +54,13 @@ public class MusicHubThread extends Thread{
 
 
 					case 'l': //add a new audiobook
-						input.readObject();
+						user = input.readObject();
 						break;
 
 					default:
 						break;
 				}
-			}
+			}while(choice.charAt(0) != 'q');
 
 		} catch (IOException | ClassNotFoundException ex) {
 			System.out.println("Server exception: " + ex.getMessage());

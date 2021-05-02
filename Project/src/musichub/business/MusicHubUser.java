@@ -29,7 +29,7 @@ class SortByAuthor implements Comparator<AudioElement>
 	}
 }
 
-public class MusicHubUser implements Serializable		//must implement Serializable in order to be sent over a Socket
+public class MusicHubUser implements Serializable,Colors		//must implement Serializable in order to be sent over a Socket
 {
 	private List<Album> albums;
 	private List<PlayList> playlists;
@@ -40,7 +40,7 @@ public class MusicHubUser implements Serializable		//must implement Serializable
 	public static final String PLAYLISTS_FILE_PATH = DIR + "/files/playlists.xml";
 	public static final String ELEMENTS_FILE_PATH = DIR + "/files/elements.xml";
 	private static final long serialVersionUID = 0;
-
+	private String userValue = "";
 	private transient XMLHandler xmlHandler = new XMLHandler(); //objet non-sérialisable
    
     public MusicHubUser() {
@@ -53,21 +53,48 @@ public class MusicHubUser implements Serializable		//must implement Serializable
 	}
 
 	public void userConnection(){
+
 		System.out.println("Enter your id :");
 		Scanner scan = new Scanner(System.in);
-		String id = scan.nextLine();
+		this.userValue = scan.nextLine();
 
-		if(id.equals("admin") | id.equals("user")){
+		if(this.userValue.equals("admin") | this.userValue.equals("user")){
+
 			System.out.println("Enter your password :");
 			String pwd = scan.nextLine();
 
-			if (pwd.equals("admin") | pwd.equals("1234")){
-				System.out.println("The id and the password are correct");
+			if (pwd.equals("admin") | pwd.equals("user")){
+				System.out.println("The id and the password are correct, you are now connected to the server !");
 			} else {
-				System.out.println("The id or the password is wrong");
+				System.out.println("The id or the password is wrong, try again");
 				System.exit(0);
 			}
+		}
+	}
 
+	public String getUserValue(){
+    	return this.userValue;
+	}
+
+	public void userAvailableCommands() {
+    	if(this.userValue.equals("user")){
+			System.out.println(BOLD + GREEN + "t: display the album titles, ordered by date");
+			System.out.println("g: display songs of an album, ordered by genre");
+			System.out.println("d: display songs of an album");
+			System.out.println("u: display audiobooks ordered by author");
+			System.out.println("q: quit program" + DEFAULT);
+		} else if(this.userValue.equals("admin")) {
+			System.out.println(BOLD + GREEN + "t: display the album titles, ordered by date");
+			System.out.println("g: display songs of an album, ordered by genre");
+			System.out.println("d: display songs of an album");
+			System.out.println("u: display audiobooks ordered by author");
+			System.out.println("c: add a new song");
+			System.out.println("a: add a new album");
+			System.out.println("+: add a song to an album");
+			System.out.println("l: add a new audiobook");
+			System.out.println("p: create a new playlist from existing songs and audio books");
+			System.out.println("-: delete an existing playlist");
+			System.out.println("q: quit program" + DEFAULT);
 		}
 	}
 

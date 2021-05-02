@@ -32,7 +32,7 @@ public class MusicHubThread extends Thread implements Colors{
 				System.out.println(RED + "The object was sent to the client" + DEFAULT);
 
 				switch (choice.charAt(0)) 	{
-					case 'h':
+					case 'h': //display available commands
 					case 't': //display the album titles, ordered by date
 					case 'u': //display audiobooks ordered by author
 					case 'd': //display songs of an album
@@ -52,7 +52,7 @@ public class MusicHubThread extends Thread implements Colors{
 						break;
 
 					case 'q': //quitting the server
-						System.out.println(((MusicHubUser) user).getUserValue() + " disconnected");
+						System.out.println("Client disconnected");
 					default:
 						System.out.println("Unknown command");
 						break;

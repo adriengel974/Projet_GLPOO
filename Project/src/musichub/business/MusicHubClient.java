@@ -22,14 +22,14 @@ public class MusicHubClient implements Colors {
 			output = new ObjectOutputStream(socket.getOutputStream());
             input = new ObjectInputStream(socket.getInputStream());
 
-			System.out.println(PURPLE + "\n\n\t\tBienvenue sur MusicHub!\n" + DEFAULT);
+			System.out.println(PURPLE + "\n\n\t\tWelcome on MusicHub!\n" + DEFAULT);
 			var user = (MusicHubUser) input.readObject(); //deserialize and read the user object from the stream
 			user.userConnection();
+			System.out.println(BOLD + "\nType h to have the commands" + DEFAULT);
 
 			Scanner scan = new Scanner(System.in);
 			String choice = scan.nextLine();
 
-			//System.out.println("text sent to the server: " + choice);
 			output.writeObject(choice);	//serialize and write the String to the stream
 
 			if (user.getUserValue().equals("user")){

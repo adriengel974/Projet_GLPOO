@@ -40,9 +40,9 @@ public class MusicHubUser implements Serializable,Colors		//must implement Seria
 	public static final String PLAYLISTS_FILE_PATH = DIR + "/files/playlists.xml";
 	public static final String ELEMENTS_FILE_PATH = DIR + "/files/elements.xml";
 	private static final long serialVersionUID = 0;
-	private String userValue = "";
 	private transient XMLHandler xmlHandler = new XMLHandler(); //non-serializable object
-   
+	private String userValue = "";
+
     public MusicHubUser() {
 		albums = new LinkedList<Album>();
 		playlists = new LinkedList<PlayList>();

@@ -78,13 +78,13 @@ public class MusicHubUser implements Serializable,Colors		//must implement Seria
 
 	public void userAvailableCommands() {
     	if(this.userValue.equals("user")){
-			System.out.println(BOLD + GREEN + "t: display the album titles, ordered by date");
+			System.out.println(GREEN + "t: display the album titles, ordered by date");
 			System.out.println("g: display songs of an album, ordered by genre");
 			System.out.println("d: display songs of an album");
 			System.out.println("u: display audiobooks ordered by author");
 			System.out.println("q: quit program" + DEFAULT);
 		} else if(this.userValue.equals("admin")) {
-			System.out.println(BOLD + GREEN + "t: display the album titles, ordered by date");
+			System.out.println(GREEN + "t: display the album titles, ordered by date");
 			System.out.println("g: display songs of an album, ordered by genre");
 			System.out.println("d: display songs of an album");
 			System.out.println("u: display audiobooks ordered by author");

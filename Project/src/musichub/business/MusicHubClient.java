@@ -35,9 +35,10 @@ public class MusicHubClient implements Colors {
 			if (user.getUserValue().equals("user")){
 				while(choice.charAt(0) != 'q') {
 					choice = scan.nextLine();
-					System.out.println("text sent to the server: " + choice);
 					output.writeObject(choice);
+					//System.out.println(YELLOW + "text sent to the server: " + DEFAULT + choice); //this line allows us to see if the output worked
 					user = (MusicHubUser) input.readObject();
+					//System.out.println(BLUE + "New object received from the server" + DEFAULT); //this line allows us to see if the input worked
 
 					switch (choice.charAt(0)) {
 						case 'h':
@@ -51,19 +52,54 @@ public class MusicHubClient implements Colors {
 							//display audiobooks ordered by author
 							System.out.println(user.getAudiobooksTitlesSortedByAuthor());
 							break;
+
+						case 'g':
+							//display songs of an album, ordered by genre
+							System.out.println(CYAN + "\nSongs of an album sorted by genre will be displayed \nAvailable albums are:" + DEFAULT);
+							System.out.println(user.getAlbumsTitlesSortedByDate());
+
+							System.out.println("Enter the name of an album");
+							String albumTitle = scan.nextLine();
+							try {
+								System.out.println(user.getAlbumSongsSortedByGenre(albumTitle));
+							} catch (NoAlbumFoundException ex) {
+								System.out.println(RED + "\nNo album found with the requested title " + DEFAULT + ex.getMessage());
+							}
+							break;
+
+						case 'd':
+							//display songs of an album
+							System.out.println(CYAN + "\nSongs of an album will be displayed \nAvailable albums are:" + DEFAULT);
+							System.out.println(user.getAlbumsTitlesSortedByDate());
+
+							System.out.println("Enter the name of an album: ");
+							albumTitle = scan.nextLine();
+							try {
+								System.out.println(user.getAlbumSongs(albumTitle));
+							} catch (NoAlbumFoundException ex) {
+								System.out.println(RED + "\nNo album found with the requested title : " + DEFAULT + ex.getMessage());
+							}
+							break;
+						case 'q':
+							System.out.println("You have been disconnected from the server!");
+							break;
 						default:
+							System.out.println("Unknown command");
 							break;
 					}
-				} scan.close();
+				}
+				user = (MusicHubUser) input.readObject();
+				scan.close();
 
 			} else if (user.getUserValue().equals("admin")){
 				while(choice.charAt(0) != 'q'){
 					choice = scan.nextLine();
-					System.out.println("text sent to the server: " + choice);
 					output.writeObject(choice);
+					//System.out.println(YELLOW + "text sent to the server: " + DEFAULT + choice); //this line allows us to see if the output worked
 					user = (MusicHubUser) input.readObject();
+					//System.out.println(BLUE + "New object received from the server" + DEFAULT); //this line allows us to see if the input worked
 
-					switch (choice.charAt(0)) 	{
+					switch (choice.charAt(0)){
 						case 'h':
 							user.userAvailableCommands();
 							break;
@@ -271,10 +307,16 @@ public class MusicHubClient implements Colors {
 						output.writeObject(user);
 						break;*/
 
+						case 'q':
+							System.out.println("You have been disconnected from the server!");
+							break;
 						default:
+							System.out.println("Unknown command");
 							break;
 					}
-				} scan.close();
+				}
+				user = (MusicHubUser) input.readObject();
+				scan.close();
 			}
 
 	    } catch  (UnknownHostException uhe) {

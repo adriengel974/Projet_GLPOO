@@ -1,0 +1,40 @@
+public class DecodeurFabrique
+
+
+   public static Decodeur getMediaDecodeur(String nomAudio){
+          nomAudio = nomAudio.toUpperCase();
+          if(nomAudio.endsWith(".MP3")){
+              return new MP3Decodeur();
+          } else if (nomAudio.endsWith(".WAV3")){
+              return new WAVDecodeur();
+          }
+          return null;
+   }
+}
+
+public class MusicHub {
+    public void init() {}
+    public void play(string nomAudio) {
+         if(nomAudio == null || "".equals(nomAudio)){
+            throw new RuntimeException("fichier audio invalide.");
+         }
+         Decodeur decodeur = DecodeurFabrique.getMediaDecodeur(nomAudio);
+         if (decodeur != null) {
+                 play(decodeur.decoderAudio(nomAudio));
+         } else {
+              throw new RuntimeException("format media non supporté.");
+         }
+     }
+
+// pour tester
+public class FabriquePatronDemo {
+      public static void main(string[] args) {
+
+          String audio = "   .mp3";
+          MusicHub  musichub = new MusicHub();
+          MusicHub.init();
+          MusicHub.play(audio);
+          
+       }
+}
+  

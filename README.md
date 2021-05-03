@@ -1,6 +1,6 @@
 # Projet_GLPOO
 
-Pour lancer le programme il suffit d’exécuter dans un terminal compile.sh (.bat selon le système utilisé) puis runMusicHub.sh (ou .bat) et enfin dans un nouvel onglet du terminal runClient.sh (ou .bat). Vous pouvez à priori lancer plusieurs clients à la fois dans plusieurs onglets différents. 
+Pour lancer le programme il suffit d’exécuter dans un terminal compile.sh (.bat selon le système utilisé) puis run.sh (ou .bat) et enfin dans un nouvel onglet du terminal runClient.sh (ou .bat). Vous pouvez à priori lancer plusieurs clients à la fois dans plusieurs onglets différents. 
 Lors du démarrage du programme, il vous sera demandé un id et un mot de passe. Vous pouvez utiliser les id suivants : 
 -	user
 -	admin

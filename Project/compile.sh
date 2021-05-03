@@ -1,3 +1,3 @@
 #!/bin/bash
 
-javac src/musichub/business/*.java src/musichub/util/*.java src/musichub/main/*.java -d bin
+javac src/Test/java/*.java src/main/java/musichub/business/*.java src/main/java/musichub/util/*.java src/main/java/musichub/main/*.java -d bin

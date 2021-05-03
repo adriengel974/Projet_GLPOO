@@ -1,1 +1,1 @@
-java -classpath bin musichub.main.ClientConnection
+java -cp bin -classpath bin musichub.main.ClientConnection

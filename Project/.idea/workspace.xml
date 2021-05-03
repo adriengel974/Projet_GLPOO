@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e31d0121-a973-4f6d-8c90-8cc3ac945ec7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1ryoyRljmSAoGSEQDec2rSgDcuy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\erwan\IdeaProjects\GLPOO" />
+      <recent name="C:\Users\erwan\IdeaProjects\GLPOO\testfiles" />
+      <recent name="C:\Users\erwan\IdeaProjects\GLPOO\src\musichub\business" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\erwan\IdeaProjects\GLPOO\bin\musichub" />
+      <recent name="C:\Users\erwan\IdeaProjects\GLPOO\bin" />
+      <recent name="C:\Users\erwan\IdeaProjects\GLPOO\bin\main" />
+      <recent name="C:\Users\erwan\IdeaProjects\GLPOO" />
+      <recent name="C:\Users\erwan\IdeaProjects\GLPOO\src\main\java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="musichub.business" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestsAlbumXMLHandler">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestsAlbumXMLHandler" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GLPOO" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestsAlbumXMLHandler" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestsAlbumXMLHandler.testAlbumRandomSong" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GLPOO" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestsAlbumXMLHandler" />
+      <option name="METHOD_NAME" value="testAlbumRandomSong" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestsAlbumXMLHandler.testConstructeurAlbum1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GLPOO" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestsAlbumXMLHandler" />
+      <option name="METHOD_NAME" value="testConstructeurAlbum1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestsAlbumXMLHandler.testConstructeurXmlAlbum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GLPOO" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestsAlbumXMLHandler" />
+      <option name="METHOD_NAME" value="testConstructeurXmlAlbum" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestsAlbumXMLHandler.testCreateXMLElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GLPOO" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestsAlbumXMLHandler" />
+      <option name="METHOD_NAME" value="testCreateXMLElement" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestsAlbumXMLHandler" />
+        <item itemvalue="JUnit.TestsAlbumXMLHandler.testConstructeurXmlAlbum" />
+        <item itemvalue="JUnit.TestsAlbumXMLHandler.testCreateXMLElement" />
+        <item itemvalue="JUnit.TestsAlbumXMLHandler.testAlbumRandomSong" />
+        <item itemvalue="JUnit.TestsAlbumXMLHandler.testConstructeurAlbum1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e31d0121-a973-4f6d-8c90-8cc3ac945ec7" name="Default Changelist" comment="" />
+      <created>1619957946179</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619957946179</updated>
+      <workItem from="1619957949431" duration="4616000" />
+      <workItem from="1619967888405" duration="13270000" />
+      <workItem from="1620056741395" duration="19021000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GLPOO$TestAlbum_testConstructeurXmlAlbum.ic" NAME="TestAlbum.testConstructeurXmlAlbum Coverage Results" MODIFIED="1620068437586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/GLPOO$TestAlbum_testConstructeurAlbum1.ic" NAME="TestAlbum.testConstructeurAlbum1 Coverage Results" MODIFIED="1620067867957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/GLPOO$TestAlbum.ic" NAME="TestAlbum Coverage Results" MODIFIED="1620071091743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
